@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #ffffff;
+}
+
+/* Gaya untuk container utama */
+.login-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Gaya untuk judul */
+.title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Gaya input form */
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    text-align: center;
+}
+
+/* Gaya untuk placeholder */
+.login-form input::placeholder {
+    color: #ddd;
+}
+
+/* Gaya untuk social login */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Tombol sosial */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+/* Gaya untuk Google */
+.google {
+    background-color: #db4437;
+}
+
+.google:hover {
+    background-color: #b73a2f;
+}
+
+/* Gaya untuk Facebook */
+.facebook {
+    background-color: #3b5998;
+}
+
+.facebook:hover {
+    background-color: #334a86;
+}
+
+/* Ikon sosial */
+.social-btn i {
+    margin-right: 8px;
+}
+
+/* Gaya tombol Next dan Back */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Tombol Next dan Back */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover efek pada tombol */
+.next:hover {
+    background: #ff3f3f;
+}
+
+.back:hover {
+    background: #6a11cb;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="login-container">
+        <!-- Judul Halaman -->
+        <h1 class="title">CREATE YOUR ACCOUNT</h1>
+
+        <!-- Form Login -->
+        <form action="#" method="POST" class="login-form">
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+
+            <!-- Continue with Google dan Facebook -->
+            <div class="social-login">
+                <a href="#" class="social-btn google">
+                    <i class="fab fa-google"></i> Continue with Google
+                </a>
+                <a href="#" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i> Continue with Facebook
+                </a>
+            </div>
+
+            <!-- Tombol Next dan Back -->
+            <div class="action-buttons">
+                <a href="../page_3/index.html" class="button next">Next</a>
+                <a href="#" onclick="goBack()" class="button back">Back</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Gender</title>
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Menghubungkan dengan CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        /* style.css */
+
+        /* Mengatur body dan latar belakang dengan gradasi */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #f06, #4a90e2); /* Gradasi dari pink ke biru */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .gender-selection {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .gender-option {
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .gender-option p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .gender-logo {
+            font-size: 3rem; /* Ukuran ikon */
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .gender-option.selected .gender-logo {
+            color: #4a90e2; /* Warna biru untuk ikon yang dipilih */
+        }
+
+        .gender-option.selected p {
+            font-weight: bold;
+            color: #4a90e2; /* Menebalkan teks pada pilihan yang dipilih */
+        }
+
+        .age-input input {
+            width: 80%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            margin-bottom: 20px;
+        }
+
+        .age-input input:focus {
+            border-color: #4a90e2;
+        }
+
+        .buttons button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons button:hover {
+            background-color: #357ab7;
+        }
+
+        #back-btn {
+            background-color: #f06;
+        }
+
+        #back-btn:hover {
+            background-color: #e04b5e;
+        }
+
+        .buttons a {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CHOOSE YOUR GENDER</h1>
+        
+        <div class="gender-selection">
+            <div class="gender-option" id="male" onclick="selectGender('male')">
+                <i class="fas fa-male gender-logo"></i>
+                <p>Male</p>
+            </div>
+            <div class="gender-option" id="female" onclick="selectGender('female')">
+                <i class="fas fa-female gender-logo"></i>
+                <p>Female</p>
+            </div>
+        </div>
+        
+        <div class="age-input">
+            <input type="number" id="age" placeholder="Your Age" />
+        </div>
+
+        <div class="buttons">
+            <button id="back-btn" onclick="goBack()">Back</button>
+            <a href="../page_4/index.html"><button id="next-btn">Next</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk tombol back menggunakan JavaScript
+        function goBack() {
+            window.history.back();
+        }
+
+        // Fungsi untuk memilih gender
+        function selectGender(gender) {
+            // Menghapus pilihan sebelumnya
+            document.querySelectorAll('.gender-option').forEach(function(option) {
+                option.classList.remove('selected');
+            });
+
+            // Menandai gender yang dipilih
+            document.getElementById(gender).classList.add('selected');
+        }
+    </script>
+</body>
+</html>

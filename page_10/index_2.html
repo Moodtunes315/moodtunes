@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Our Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Back Button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #007bff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            color: #0056b3;
+        }
+
+        /* Title */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Rating Stars */
+        .rating {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .rating i {
+            font-size: 2.5rem;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .rating i.selected {
+            color: #f39c12; /* Gold color for selected stars */
+        }
+
+        /* Send Button */
+        .send-button {
+            background-color: #1db954;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            padding: 12px 25px;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .send-button:hover {
+            background-color: #17a44a;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Back Button -->
+        <a href="javascript:void(0);" class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+
+        <!-- Title -->
+        <h1>Rate Our Application</h1>
+
+        <!-- Rating Stars -->
+        <div class="rating" id="stars">
+            <i class="fas fa-star" onclick="rate(1)"></i>
+            <i class="fas fa-star" onclick="rate(2)"></i>
+            <i class="fas fa-star" onclick="rate(3)"></i>
+            <i class="fas fa-star" onclick="rate(4)"></i>
+            <i class="fas fa-star" onclick="rate(5)"></i>
+        </div>
+
+        <!-- Send Button -->
+        <button class="send-button" onclick="sendRating()">Send</button>
+        
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        let selectedRating = 0;
+
+        // Function to handle star rating
+        function rate(stars) {
+            selectedRating = stars;
+            const starElements = document.querySelectorAll('.rating i');
+            starElements.forEach((star, index) => {
+                if (index < stars) {
+                    star.classList.add('selected');
+                } else {
+                    star.classList.remove('selected');
+                }
+            });
+        }
+
+        // Function for sending rating (currently just logs the rating)
+        function sendRating() {
+            if (selectedRating === 0) {
+                alert('Please select a rating!');
+            } else {
+                alert('Thank you for your rating of ' + selectedRating + ' stars!');
+            }
+        }
+
+        // Function to go back
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+        }
+        .container {
+            background-color: #282828;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        /* Back Button */
+        .back-button {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: #b3b3b3;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 5px;
+            background-color: #444;
+            border: 1px solid #333;
+        }
+        .back-button:hover {
+            color: #fff;
+            background-color: #555;
+        }
+
+        /* Title */
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        /* Menu Options */
+        .menu-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .menu-option:hover {
+            background-color: #444;
+        }
+        .menu-option i {
+            font-size: 1.5rem;
+            color: #1db954;
+            margin-right: 15px;
+        }
+        .menu-text {
+            font-size: 1.1rem;
+            flex-grow: 1;
+            text-align: left;
+        }
+        .menu-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Next Button */
+        .next-button {
+            background-color: #1db954;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .next-button:hover {
+            background-color: #17a44a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Back Button -->
+        <a href="javascript:void(0);" class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+
+        <!-- Welcome Title -->
+        <h1>WELCOME TO THE MAIN MENU</h1>
+
+        <!-- Menu Options -->
+        <div class="menu-option">
+            <i class="fas fa-music"></i>
+            <span class="menu-text">My Playlist</span>
+        </div>
+
+        <div class="menu-option">
+            <i class="fas fa-user-edit"></i>
+            <span class="menu-text">Edit Account</span>
+        </div>
+
+        <a href="index_3.html" class="menu-option menu-link">
+            <i class="fas fa-question-circle"></i>
+            <span class="menu-text">FAQ</span>
+        </a>
+
+        <div class="menu-option">
+            <i class="fas fa-bell"></i>
+            <span class="menu-text">Allow Notifications</span>
+        </div>
+
+        <a href="index_2.html" class="menu-option menu-link">
+            <i class="fas fa-star"></i>
+            <span class="menu-text">Rate Our Application</span>
+        </a>
+
+        <!-- Next Button -->
+        <div class="navigation-buttons">
+            <a href="../page_11/index.html" class="next-button">Next</a>
+        </div>
+    </div>
+
+    <!-- JavaScript for Back Button -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
+

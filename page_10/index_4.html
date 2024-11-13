@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write About Your Problem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Back Button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #007bff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            color: #0056b3;
+        }
+
+        /* Title */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Input Area */
+        .input-area {
+            width: 100%;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            resize: none;
+            transition: border-color 0.3s;
+        }
+        .input-area:focus {
+            border-color: #1db954;
+            outline: none;
+        }
+
+        /* Send Button */
+        .send-button {
+            background-color: #1db954;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            padding: 12px 25px;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .send-button:hover {
+            background-color: #17a44a;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Back Button -->
+        <a href="javascript:void(0);" class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+
+        <!-- Title -->
+        <h1>Write About Your Problem</h1>
+
+        <!-- Input Area -->
+        <textarea class="input-area" id="problem" placeholder="Please describe your problem here..."></textarea>
+
+        <!-- Send Button -->
+        <button class="send-button" onclick="sendProblem()">Send</button>
+        
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to handle sending the problem (currently logs the input)
+        function sendProblem() {
+            const problemText = document.getElementById("problem").value;
+            if (problemText.trim() === "") {
+                alert("Please write about your problem before sending.");
+            } else {
+                alert("Your problem has been sent. Thank you for sharing.");
+                document.getElementById("problem").value = "";  // Clear the textarea after sending
+            }
+        }
+
+        // Function to go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

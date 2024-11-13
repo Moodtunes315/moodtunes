@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looking for Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        /* General Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .sticker {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .music-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 15px;
+        }
+        .controls button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .controls button:hover {
+            background-color: #357ab7;
+        }
+        .buttons button, .buttons a {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .buttons button:hover, .buttons a:hover {
+            background-color: #357ab7;
+        }
+        #back-btn {
+            background-color: #f06;
+        }
+        #back-btn:hover {
+            background-color: #e04b5e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LOOKING FOR MUSIC</h1>
+        <img src="../assets/birthday.png" alt="Sticker" class="sticker">
+        
+        <div class="music-player">
+            <div class="controls">
+                <button id="back-music"><i class="fas fa-step-backward"></i></button>
+                <button id="play-music"><i class="fas fa-play"></i></button>
+                <button id="next-music"><i class="fas fa-step-forward"></i></button>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button id="back-btn" onclick="goBack()">Back</button>
+            <a href="../page_9/index.html" id="next-btn">Next</a>
+        </div>
+    </div>
+
+    <script>
+        // Function for Back button
+        function goBack() {
+            // Navigate back in history
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        /* General Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        /* Search Box Animation */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .search-container input {
+            width: 0;
+            padding: 8px 15px;
+            border: 2px solid #4a90e2;
+            border-radius: 20px;
+            font-size: 1rem;
+            outline: none;
+            transition: width 0.4s ease;
+        }
+        .search-container input:focus {
+            width: 100%;
+            max-width: 300px;
+        }
+        .search-container .search-icon {
+            position: absolute;
+            right: 10px;
+            color: #4a90e2;
+            font-size: 1.2rem;
+        }
+
+        /* Playlist Styling */
+        .playlist {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            color: #333;
+        }
+        .playlist:hover {
+            background-color: #e0e0e0;
+        }
+        .playlist-info {
+            text-align: left;
+        }
+        .playlist-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .playlist-songs {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .playlist-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 1.2rem;
+        }
+        .playlist-icons .icon {
+            cursor: pointer;
+            color: #4a90e2;
+            transition: color 0.3s ease;
+        }
+        .playlist-icons .icon:hover {
+            color: #357ab7;
+        }
+
+        /* Buttons Styling */
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .buttons button, .buttons a {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .buttons button:hover, .buttons a:hover {
+            background-color: #357ab7;
+        }
+        #back-btn {
+            background-color: #f06;
+        }
+        #back-btn:hover {
+            background-color: #e04b5e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LOOKING FOR PLAYLIST</h1>
+
+        <!-- Search Container -->
+        <div class="search-container">
+            <input type="text" placeholder="Search playlists...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <!-- Playlists -->
+        <a href="index_2.html" class="playlist"> <!-- Link to folder/page for Happy Playlist -->
+            <div class="playlist-info">
+                <div class="playlist-name">Happy Playlist</div>
+                <div class="playlist-songs">(135 songs)</div>
+            </div>
+            <div class="playlist-icons">
+                <i class="fas fa-heart icon"></i>
+                <i class="fas fa-ellipsis-v icon"></i>
+            </div>
+        </a>
+        
+        <div class="playlist">
+            <div class="playlist-info">
+                <div class="playlist-name">Chilling Playlist</div>
+                <div class="playlist-songs">(95 songs)</div>
+            </div>
+            <div class="playlist-icons">
+                <i class="fas fa-heart icon"></i>
+                <i class="fas fa-ellipsis-v icon"></i>
+            </div>
+        </div>
+
+        <div class="playlist">
+            <div class="playlist-info">
+                <div class="playlist-name">Dancing Playlist</div>
+                <div class="playlist-songs">(72 songs)</div>
+            </div>
+            <div class="playlist-icons">
+                <i class="fas fa-heart icon"></i>
+                <i class="fas fa-ellipsis-v icon"></i>
+            </div>
+        </div>
+
+        <div class="playlist">
+            <div class="playlist-info">
+                <div class="playlist-name">No Bad Mood</div>
+                <div class="playlist-songs">(50 songs)</div>
+            </div>
+            <div class="playlist-icons">
+                <i class="fas fa-heart icon"></i>
+                <i class="fas fa-ellipsis-v icon"></i>
+            </div>
+        </div>
+
+        <div class="playlist">
+            <div class="playlist-info">
+                <div class="playlist-name">Be Happy Playlist</div>
+                <div class="playlist-songs">(85 songs)</div>
+            </div>
+            <div class="playlist-icons">
+                <i class="fas fa-heart icon"></i>
+                <i class="fas fa-ellipsis-v icon"></i>
+            </div>
+        </div>
+
+        <div class="playlist">
+            <div class="playlist-info">
+                <div class="playlist-name">Pop Playlist</div>
+                <div class="playlist-songs">(120 songs)</div>
+            </div>
+            <div class="playlist-icons">
+                <i class="fas fa-heart icon"></i>
+                <i class="fas fa-ellipsis-v icon"></i>
+            </div>
+        </div>
+
+        <div class="playlist">
+            <div class="playlist-info">
+                <div class="playlist-name">No Worries Playlist</div>
+                <div class="playlist-songs">(90 songs)</div>
+            </div>
+            <div class="playlist-icons">
+                <i class="fas fa-heart icon"></i>
+                <i class="fas fa-ellipsis-v icon"></i>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="back-btn" onclick="goBack()">Back</button>
+            <a href="../page_10/index.html" id="next-btn">Next</a>
+        </div>
+    </div>
+
+    <script>
+        // Function for Back button
+        function goBack() {
+            // Navigate back in history
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

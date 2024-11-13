@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Mood Tunes</title>
+    <style>
+        /* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #ffffff;
+}
+
+/* Gaya container utama */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Gaya untuk stiker */
+.sticker {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk judul */
+.title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Gaya untuk tombol */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover efek pada tombol */
+.button:hover {
+    background: #ff3f3f;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Stiker -->
+        <img src="assets/mexican.png" alt="Stiker" class="sticker">
+
+        <!-- Teks di bawah stiker -->
+        <h1 class="title">MOOD TUNES</h1>
+
+        <!-- Tombol Masuk -->
+        <a href="page_2/index.html" class="button">Masuk</a>
+    </div>
+</body>
+</html>

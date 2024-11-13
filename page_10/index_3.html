@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Website Saya</title>
+  <style>
+    /* Reset default margin dan padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Styling untuk FAQ */
+.faq-container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.faq-item {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.faq-item h2 {
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Ask for help */
+.ask-help {
+  background-color: red;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.ask-help .help-link {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ask-help .help-link:hover {
+  text-decoration: underline;
+}
+
+/* Tombol navigasi */
+.navigation-buttons {
+  margin-top: 30px;
+  text-align: center;
+}
+
+button, .next-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.next-button {
+  background-color: #008CBA;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.next-button:hover {
+  background-color: #0073a6;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FAQ</h1>
+  </header>
+
+  <main>
+    <section class="faq-container">
+      <div class="faq-item">
+        <h2>What to do if I forgot?</h2>
+        <p>Learn what to do if you've forgotten your account details or credentials.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h2>What to do if I want to change my username?</h2>
+        <p>Find out how to change your username in the system.</p>
+      </div>
+
+      <div class="faq-item">
+        <h2>What to do if I want to change my password?</h2>
+        <p>Step-by-step guide to changing your password securely.</p>
+      </div>
+      
+      <!-- Ask for help -->
+      <div class="ask-help">
+        <a href="index_4.html" class="help-link">Ask for help</a>
+      </div>
+      
+      <!-- Navigation buttons -->
+      <div class="navigation-buttons">
+        <button onclick="goBack()">Back</button>
+        <a href="folder_next" class="next-button">Next</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Fungsi untuk kembali ke halaman sebelumnya
+function goBack() {
+  window.history.back();
+}
+
+  </script>
+</body>
+</html>
